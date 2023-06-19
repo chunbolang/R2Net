@@ -1,0 +1,42 @@
+# Optimizer
+ignore_label: 255
+batch_size: 8 # batch size for training (bs8 for 1GPU)
+base_lr: 0.005
+epochs: 200
+start_epoch: 0
+stop_interval: 75 # stop when the best result is not updated for "stop_interval" epochs
+
+cross_weight: 
+lr_decay:
+  type: 'poly_learning_rate'
+  index_split: -1 # index for determining the params group with 10x learning rate
+  power: 0.9 # 0 means no decay
+  momentum: 0.9
+  weight_decay: 0.0001
+  warmup: False
+# Viz & Save & Resume
+print_freq: 10
+save_freq: 5
+resume: # path to latest checkpoint (default: none, such as epoch_10.pth)  
+# Validate
+evaluate: True
+SubEpoch_val: False # val at the half epoch
+sub_freq: 1
+fix_random_seed_val: True
+batch_size_val: 1
+resized_val: True
+ori_resize: True  # use original label for evaluation
+# Else
+workers: 8
+fix_bn: True
+manual_seed: 321
+seed_deterministic: False
+fp16: False
+pretrain: True
+val_freq: 1
+
+  
+freeze_layer: ['layer0', 'layer1', 'layer2', 'layer3', 'layer4']
+
+aux_weight1: 0.5
+aux_weight2: 0.0

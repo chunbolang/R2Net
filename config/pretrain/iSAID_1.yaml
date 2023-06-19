@@ -1,0 +1,76 @@
+# Optimizer
+ignore_label: 255
+batch_size: 16 # batch size for training (bs8 for 1GPU) 16 *8 0.01
+base_lr: 1.25e-3 #3.5e-4 8 for SDM 6   2.5e-4
+epochs: 50
+start_epoch: 0
+stop_interval: 75 # stop when the best result is not updated for "stop_interval" epochs
+
+lr_decay:
+  type: 'poly_learning_rate'
+  # rate: 2
+  index_split: 0 # index for determining the params group with 10x learning rate
+  power: 0.9 # 0 means no decay
+  momentum: 0.9
+  weight_decay: 0.0001
+
+
+# Viz & Save & Resume
+print_freq: 10
+save_freq: 5
+resume: 'latest.pth' # path to latest checkpoint (default: none, such as epoch_10.pth)  
+# Validate
+evaluate: True
+SubEpoch_val: False # val at the half epoch
+fix_random_seed_val: True
+batch_size_val: 16
+resized_val: True
+ori_resize: False  # use original label for evaluation
+# Else
+workers: 8
+fix_bn: True
+manual_seed: 321
+seed_deterministic: False
+fp16: False
+pretrain: True
+val_freq: 1
+  
+#Method:
+aux_weight1: 0.0
+aux_weight2: 0.0
+#Test_Finetune:
+weight:  # load weight for fine-tuning or testing (such as best.pth)
+
+train_transform: 
+  type: 'base'
+  RandScale:
+    scale: [0.5,2.0]    # minimum and maximum random scale
+  RandRotate:
+    rotate: [-10,10]  # minimum and maximum random rotate
+    padding: [123.675, 116.28, 103.53]
+    ignore_label: 255
+  RandomGaussianBlur:
+    radius: 5
+  RandomHorizontalFlip:
+    p: 0.5
+  Crop:
+    size: [417,417]
+    crop_type: 'rand'
+    padding: [123.675, 116.28, 103.53]
+    ignore_label: 255
+  ToTensor:
+    enabled: True
+  Normalize:
+    mean: [123.675, 116.28, 103.53]
+    std: [58.395, 57.12, 57.375]
+
+
+val_transform:
+  type: 'base'
+  test_Resize:   # use the original picture to evaluate; if not please use Resize
+    size: 417
+  ToTensor:
+    enabled: True
+  Normalize:
+    mean: [123.675, 116.28, 103.53]
+    std: [58.395, 57.12, 57.375]

@@ -1,0 +1,51 @@
+-----------------------iSAID_val-----------------------
+同时含有1个类别的图像数目：3490.0
+同时含有2个类别的图像数目：2745.0
+同时含有3个类别的图像数目：1077.0
+同时含有4个类别的图像数目：215.0
+同时含有5个类别的图像数目：44.0
+同时含有6个类别的图像数目：9.0
+同时含有7个类别的图像数目：1.0
+同时含有8个类别的图像数目：0.0
+同时含有9个类别的图像数目：0.0
+同时含有10个类别的图像数目：0.0
+同时含有11个类别的图像数目：0.0
+同时含有12个类别的图像数目：0.0
+同时含有13个类别的图像数目：0.0
+同时含有14个类别的图像数目：0.0
+同时含有15个类别的图像数目：0.0
+图像总数：7581.0
+类别1 	 图像数目：1600.0 	 ship 
+类别2 	 图像数目：382.0 	 storage_tank 
+类别3 	 图像数目：242.0 	 baseball_diamond 
+类别4 	 图像数目：458.0 	 tennis_court 
+类别5 	 图像数目：138.0 	 basketball_court 
+类别6 	 图像数目：347.0 	 Ground_Track_Field 
+类别7 	 图像数目：486.0 	 Bridge 
+类别8 	 图像数目：2099.0 	 Large_Vehicle 
+类别9 	 图像数目：4170.0 	 Small_Vehicle 
+类别10 	 图像数目：65.0 	 Helicopter 
+类别11 	 图像数目：355.0 	 Swimming_pool 
+类别12 	 图像数目：218.0 	 Roundabout 
+类别13 	 图像数目：377.0 	 Soccer_ball_field 
+类别14 	 图像数目：1114.0 	 plane 
+类别15 	 图像数目：1301.0 	 Harbor 
+图像数目类别比列为：[24.62  5.88  3.72  7.05  2.12  5.34  7.48 32.29 64.15  1.    5.46  3.35
+  5.8  17.14 20.02]
+类别1 	 像素点数目：15.2 million 	 ship
+类别2 	 像素点数目：3.4 million 	 storage_tank
+类别3 	 像素点数目：3.6 million 	 baseball_diamond
+类别4 	 像素点数目：13.7 million 	 tennis_court
+类别5 	 像素点数目：2.4 million 	 basketball_court
+类别6 	 像素点数目：8.2 million 	 Ground_Track_Field
+类别7 	 像素点数目：1.5 million 	 Bridge
+类别8 	 像素点数目：11.5 million 	 Large_Vehicle
+类别9 	 像素点数目：14.6 million 	 Small_Vehicle
+类别10 	 像素点数目：0.2 million 	 Helicopter
+类别11 	 像素点数目：0.9 million 	 Swimming_pool
+类别12 	 像素点数目：0.9 million 	 Roundabout
+类别13 	 像素点数目：15.4 million 	 Soccer_ball_field
+类别14 	 像素点数目：12.5 million 	 plane
+类别15 	 像素点数目：16.4 million 	 Harbor
+像素点类别比列为：[65.56 14.54 15.49 59.36 10.57 35.56  6.48 49.63 63.07  1.    4.05  3.8
+ 66.35 54.08 71.03]

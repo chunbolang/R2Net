@@ -1,0 +1,49 @@
+# Optimizer
+ignore_label: 255
+
+epochs: 12
+# Else
+pretrain: True
+
+SubEpoch_val: True # val at the half epoch
+sub_freq: 2
+
+# fp16: False
+
+train_transform: 
+  type: 'base'
+  sample_mode: 'rand' # class rand
+  fliter_mode: True
+  RandScale:
+    scale: [0.9,1.1]    #minimum and maximum random scale
+  RandRotate:
+    rotate: [-10,10]  #minimum and maximum random rotate
+    padding: [123.675, 116.28, 103.53]
+    ignore_label: 255
+  RandomGaussianBlur:
+    radius: 5
+  RandomHorizontalFlip:
+    p: 0.5
+  Crop:
+    size: [512,512]
+    crop_type: 'rand'
+    padding: [123.675, 116.28, 103.53]
+    ignore_label: 255
+  ToTensor:
+    enabled: True
+  Normalize:
+    mean: [123.675, 116.28, 103.53]
+    std: [58.395, 57.12, 57.375]
+
+
+val_transform:
+  type: 'base'
+  sample_mode: 'rand'
+  fliter_mode: False
+  test_Resize:   #use the original picture to evaluate; if not please use Resize
+    size: 512
+  ToTensor:
+    enabled: True
+  Normalize:
+    mean: [123.675, 116.28, 103.53]
+    std: [58.395, 57.12, 57.375]

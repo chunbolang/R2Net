@@ -1,0 +1,83 @@
+SubEpoch_val: True
+arch: R2Net
+aux_weight1: 0.5
+aux_weight2: 0.5
+backbone: vgg
+base_class_num: 10
+base_lr: 0.005
+batch_size: 8
+batch_size_val: 1
+cross_weight: None
+dataset: iSAID
+distributed: False
+epochs: 12
+evaluate: True
+fix_bn: True
+fix_random_seed_val: True
+fp16: False
+freeze_layer: ['layer0', 'layer1', 'layer2', 'layer3', 'layer4', 'base_layer']
+ignore_label: 255
+local_rank: -1
+logger: <RootLogger root (INFO)>
+lr_decay:
+  index_split: -1
+  momentum: 0.9
+  power: 0.9
+  type: poly_learning_rate
+  warmup: False
+  weight_decay: 0.0001
+manual_seed: 321
+novel_class_num: 5
+opts: None
+ori_resize: True
+para_limit:
+  limit: [[0, 1], [0, 1], [0, 1]]
+  name: ['alpha', 'beta', 'pro_global']
+pretrain: True
+print_freq: 10
+resized_val: True
+result_path: exp/R2Net/iSAID/vgg/split0/result/
+resume: None
+save_freq: 5
+seed_deterministic: False
+shot: 1
+snapshot_path: exp/R2Net/iSAID/vgg/split0/1shot/
+split: 0
+start_epoch: 0
+stop_interval: 75
+sub_freq: 2
+train_transform:
+  Crop:
+    crop_type: rand
+    ignore_label: 255
+    padding: [123.675, 116.28, 103.53]
+    size: [512, 512]
+  Normalize:
+    mean: [123.675, 116.28, 103.53]
+    std: [58.395, 57.12, 57.375]
+  RandRotate:
+    ignore_label: 255
+    padding: [123.675, 116.28, 103.53]
+    rotate: [-10, 10]
+  RandScale:
+    scale: [0.9, 1.1]
+  RandomGaussianBlur:
+    radius: 5
+  RandomHorizontalFlip:
+    p: 0.5
+  ToTensor:
+    enabled: True
+  type: base
+val_freq: 1
+val_transform:
+  Normalize:
+    mean: [123.675, 116.28, 103.53]
+    std: [58.395, 57.12, 57.375]
+  ToTensor:
+    enabled: True
+  test_Resize:
+    size: 512
+  type: base
+variable1: 
+variable2: 
+workers: 8
