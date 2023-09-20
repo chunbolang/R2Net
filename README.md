@@ -38,10 +38,12 @@ This repository contains the source code for our paper "*Global Rectification an
 ## 📝 Data Preparation
 
 - Create a folder `data` at the same level as this repo in the root directory.
+
   ```
   cd ..
   mkdir data
   ```
+  
 - Download the iSAID dataset from our [[OneDrive]](https://mailnwpueducn-my.sharepoint.com/:u:/g/personal/langchunbo_mail_nwpu_edu_cn/EbOLExyJqaFLquSK2F2oNGMBA3_c7qlttFm_tROxnsR9Cg?e=wqteBv) and put it in the `data` directory.
 
 ## ▶️ Getting Started
@@ -49,7 +51,8 @@ This repository contains the source code for our paper "*Global Rectification an
 ### Training base-learners (two options)
 
 - Option 1: training from scratch
-  
+
+  Download the pre-trained backbones from [here](https://mailnwpueducn-my.sharepoint.com/:u:/g/personal/langchunbo_mail_nwpu_edu_cn/EflpnBbWaftEum485cNq8v8BdSHiKvXLaX-dBBsbtdnCjg?e=FAxL2e) and put them into the `R2Net/initmodel` directory.
   ```
   train_base.sh
   ```
