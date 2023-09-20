@@ -44,7 +44,7 @@ This repository contains the source code for our paper "*Global Rectification an
   mkdir data
   ```
   
-- Download the iSAID dataset from our [[OneDrive]](https://mailnwpueducn-my.sharepoint.com/:u:/g/personal/langchunbo_mail_nwpu_edu_cn/EbOLExyJqaFLquSK2F2oNGMBA3_c7qlttFm_tROxnsR9Cg?e=wqteBv) and put it in the `data` directory.
+- Download the iSAID dataset from our [[OneDrive]](https://mailnwpueducn-my.sharepoint.com/:u:/g/personal/langchunbo_mail_nwpu_edu_cn/EbOLExyJqaFLquSK2F2oNGMBA3_c7qlttFm_tROxnsR9Cg?e=9el5S2) and put it in the `data` directory.
 
 ## ▶️ Getting Started
 
@@ -63,7 +63,7 @@ This repository contains the source code for our paper "*Global Rectification an
   cd initmodel
   ```
   
-  Put the provided [models](https://mailnwpueducn-my.sharepoint.com/:u:/g/personal/langchunbo_mail_nwpu_edu_cn/EXgoKTugPoJFhrJVd2gK8iUBaPXlYePQtOt0xpWS60qoLw?e=EJ9tEW) in the newly created folder `initmodel` and rename the downloaded file to `PSPNet`, *i.e.*, `R2Net/initmodel/PSPNet`.
+  Put the provided [models](https://mailnwpueducn-my.sharepoint.com/:u:/g/personal/langchunbo_mail_nwpu_edu_cn/EXgoKTugPoJFhrJVd2gK8iUBaPXlYePQtOt0xpWS60qoLw?e=66oTYh) in the newly created folder `initmodel` and rename the downloaded file to `PSPNet`, *i.e.*, `R2Net/initmodel/PSPNet`.
 
 ### Training few-shot models
 
