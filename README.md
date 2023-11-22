@@ -90,7 +90,25 @@ test.sh
 ## 📖 BibTex
 If you find this repository useful for your publications, please consider citing our paper.
 
-Our paper is under review...
+```bibtex
+@article{lang2023r2net,
+	title={Global Rectification and Decoupled Registration for Few-Shot Segmentation in Remote Sensing Imagery},
+	author={Lang, Chunbo and Cheng, Gong and Tu, Binfei and Han, Junwei},
+	journal={IEEE Transactions on Geoscience and Remote Sensing},
+	volume={61},
+	pages={1-11},
+	year={2023},
+}
+
+@article{lang2023pcnet,
+	title={Progressive Parsing and Commonality Distillation for Few-shot Remote Sensing Segmentation},
+	author={Lang, Chunbo and Wang, Junyi and Cheng, Gong and Tu, Binfei and Han, Junwei},
+	journal={IEEE Transactions on Geoscience and Remote Sensing},
+	volume={61},
+	pages={1-10},
+	year={2023},
+}
+```
 
 ## 👏 Acknowledgements
 The project is based on [PFENet](https://github.com/dvlab-research/PFENet) and [mmseg](https://github.com/open-mmlab/mmsegmentation). Thanks for the authors for their efforts.
